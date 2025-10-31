@@ -1,5 +1,3 @@
-.git
-.vscode
-.venv
-venv
-.idea
+.git/
+.vscode/
+.idea/
