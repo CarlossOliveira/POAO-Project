@@ -1,3 +1,5 @@
+package main.models;
+
 public class Docent {
     private String[] faculty;
     private String service;

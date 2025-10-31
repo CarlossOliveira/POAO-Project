@@ -1,10 +1,12 @@
+package main.models;
+
 public class Student extends User {
     private String curso;
     private int polo;
 
-    public Student(){}
+    public Student() {}
 
-    public Student(String mechanographicNumber, String paymentMethod, String curso, int polo){
+    public Student(String mechanographicNumber, String paymentMethod, String curso, int polo) {
         super(mechanographicNumber, paymentMethod);
         this.curso = curso;
         this.polo = polo;

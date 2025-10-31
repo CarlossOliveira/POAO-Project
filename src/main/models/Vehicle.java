@@ -1,8 +1,9 @@
+package main.models;
+
 import java.lang.reflect.AccessFlag;
-import jdk.jfr.Unsigned;
 
 public class Vehicle {
-    Unsigned int id;
+    int id;
     AccessFlag.Location location;
 
     public Vehicle(){}
