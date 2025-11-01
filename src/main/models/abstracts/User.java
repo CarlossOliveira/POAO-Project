@@ -1,6 +1,6 @@
-package main.models;
+package main.models.abstracts;
 
-public class User {
+public abstract class User {
     private String mechanographicNumber;
     private String paymentMethod;
 

@@ -1,8 +1,8 @@
-package main.models;
+package main.models.abstracts;
 
 import java.lang.reflect.AccessFlag;
 
-public class Vehicle {
+public abstract class Vehicle {
     int id;
     AccessFlag.Location location;
 

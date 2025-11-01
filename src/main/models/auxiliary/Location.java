@@ -1,4 +1,4 @@
-package main.models;
+package main.models.auxiliary;
 
 public class Location {
     public float latitude;

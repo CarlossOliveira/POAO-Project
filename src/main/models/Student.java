@@ -1,5 +1,7 @@
 package main.models;
 
+import main.models.abstracts.User;
+
 public class Student extends User {
     private String curso;
     private int polo;
