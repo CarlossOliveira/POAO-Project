@@ -3,17 +3,17 @@ package main.models;
 import main.models.abstracts.User;
 
 public class Student extends User {
-    public enum polos {
+    public enum Polos {
         POLO_1,
         POLO_2,
         POLO_3
     }
-    private polos polo;
+    private Polos polo;
     private String curso;
 
     public Student() {}
 
-    public Student(String mechanographicNumber, PaymentMethod paymentMethod, String curso, polos polo) {
+    public Student(String mechanographicNumber, PaymentMethod paymentMethod, String curso, Polos polo) {
         super(mechanographicNumber, paymentMethod);
         this.curso = curso;
         this.polo = polo;
@@ -27,11 +27,11 @@ public class Student extends User {
         this.curso = curso;
     }
 
-    public polos getPolo() {
+    public Polos getPolo() {
         return polo;
     }
 
-    public void setPolo(polos polo) {
+    public void setPolo(Polos polo) {
         this.polo = polo;
     }
 

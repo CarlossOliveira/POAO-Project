@@ -5,11 +5,11 @@ import main.interfaces.BatteryLevel;
 import main.models.abstracts.Vehicle;
 
 public class ElectricScooter extends Vehicle implements BatteryLevel {
-    public enum hasLCD {
+    public enum HasLCD {
         TRUE,
         FALSE
     }
-    private hasLCD LCD;
+    private HasLCD LCD;
     private int batteryLevel;
 
     public ElectricScooter() {};
@@ -17,20 +17,20 @@ public class ElectricScooter extends Vehicle implements BatteryLevel {
     public ElectricScooter(int id, AccessFlag.Location location, int batteryLevel) {
         super(id, location);
         this.batteryLevel = batteryLevel;
-        this.LCD = hasLCD.FALSE;
+        this.LCD = HasLCD.FALSE;
     }
 
-    public ElectricScooter(int id, AccessFlag.Location location, int batteryLevel, hasLCD LCD) {
+    public ElectricScooter(int id, AccessFlag.Location location, int batteryLevel, HasLCD LCD) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.LCD = LCD;
     }
 
-    public hasLCD getLCD() {
+    public HasLCD getLCD() {
         return LCD;
     }
 
-    public void setLCD(hasLCD LCD) {
+    public void setLCD(HasLCD LCD) {
         this.LCD = LCD;
     }
 

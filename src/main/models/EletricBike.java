@@ -6,11 +6,11 @@ import main.interfaces.Capacity;
 import main.models.abstracts.Vehicle;
 
 public class EletricBike extends Vehicle implements BatteryLevel, Capacity {
-    public enum hasRemovableBattery {
+    public enum HasRemovableBattery {
         TRUE,
         FALSE,
     }
-    private hasRemovableBattery removableBattery;
+    private HasRemovableBattery removableBattery;
     private int maxCapacity;
     private int batteryLevel;
 
@@ -20,21 +20,21 @@ public class EletricBike extends Vehicle implements BatteryLevel, Capacity {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.maxCapacity = maxCapacity;
-        this.removableBattery = hasRemovableBattery.FALSE;
+        this.removableBattery = HasRemovableBattery.FALSE;
     }
 
-    public EletricBike(int id, AccessFlag.Location location, int batteryLevel, int maxCapacity, hasRemovableBattery removableBattery) {
+    public EletricBike(int id, AccessFlag.Location location, int batteryLevel, int maxCapacity, HasRemovableBattery removableBattery) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.maxCapacity = maxCapacity;
         this.removableBattery = removableBattery;
     }
 
-    public hasRemovableBattery getRemovableBattery() {
+    public HasRemovableBattery getRemovableBattery() {
         return removableBattery;
     }
 
-    public void setRemovableBattery(hasRemovableBattery removableBattery) {
+    public void setRemovableBattery(HasRemovableBattery removableBattery) {
         this.removableBattery = removableBattery;
     }
 
