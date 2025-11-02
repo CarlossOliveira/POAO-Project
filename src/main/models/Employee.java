@@ -1,27 +1,33 @@
 package main.models;
 
+import java.util.Arrays;
 import main.interfaces.Docent;
 import main.models.abstracts.User;
 import main.models.auxiliary.DateTime;
 
 public class Employee extends User implements Docent {
-
+    private Faculties[] faculties;
     private DateTime hireDate;
-    private String[] faculties;
     private String service;
+    private static String role = "Docent"; // Default role for Docents
+    private static Faculties[] noFaculties = new Faculties[0]; // Default empty faculties array for non-Docents
 
     public Employee() {}
 
-    public Employee(String mechanographicNumber, String paymentMethod, DateTime hireDate, String[] faculties) {
+    // Constructor for Employee that is also a Docent
+    public Employee(String mechanographicNumber, PaymentMethod paymentMethod, DateTime hireDate, Faculties[] faculties) {
         super(mechanographicNumber, paymentMethod);
         this.hireDate = hireDate;
         this.faculties = faculties;
+        this.service = role; // Default service for Docents
     }
 
-    public Employee(String mechanographicNumber, String paymentMethod, DateTime hireDate, String service) {
+    // Constructor for Employee that is not a Docent
+    public Employee(String mechanographicNumber, PaymentMethod paymentMethod, DateTime hireDate, String service) {
         super(mechanographicNumber, paymentMethod);
         this.hireDate = hireDate;
         this.service = service;
+        this.faculties = noFaculties; // Not a Docent
     }
 
     public DateTime getHireDate() {
@@ -32,15 +38,13 @@ public class Employee extends User implements Docent {
         this.hireDate = hireDate;
     }
 
-
-
     @Override
-    public String[] getFaculties() {
+    public Faculties[] getFaculties() {
         return faculties;
     }
 
     @Override
-    public void setFaculties(String[] faculties) {
+    public void setFaculties(Faculties[] faculties) {
         this.faculties = faculties;
     }
 
@@ -58,7 +62,7 @@ public class Employee extends User implements Docent {
     public String toString() {
         return "Employee{" +
                 "hireDate=" + hireDate +
-                ", faculties=" + String.join(", ", faculties) +
+                ", faculties=" + Arrays.toString(faculties) +
                 ", service='" + service + '\'' +
                 "} " + super.toString();
     }

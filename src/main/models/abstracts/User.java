@@ -1,12 +1,20 @@
 package main.models.abstracts;
 
 public abstract class User {
+    public enum PaymentMethod {
+        MBWAY,
+        MULTIBANCO,
+        CREDIT_CARD,
+        SASUC,
+        CASH
+    }
+    private PaymentMethod paymentMethod;
     private String mechanographicNumber;
-    private String paymentMethod;
+    
 
     public User(){}
 
-    public User(String mechanographicNumber, String paymentMethod) {
+    public User(String mechanographicNumber, PaymentMethod paymentMethod) {
         this.mechanographicNumber = mechanographicNumber;
         this.paymentMethod = paymentMethod;
     }
@@ -16,10 +24,10 @@ public abstract class User {
     public void setMechanographicNumber(String mechanographicNumber) {
         this.mechanographicNumber = mechanographicNumber;
     }
-    public String getPaymentMethod() {
+    public PaymentMethod getPaymentMethod() {
         return paymentMethod;
     }
-    public void setPaymentMethod(String paymentMethod) {
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
