@@ -4,9 +4,9 @@ import main.models.abstracts.User;
 
 public class Student extends User {
     public enum Polos {
-        POLO_1,
-        POLO_2,
-        POLO_3
+        POLO_I,
+        POLO_II,
+        POLO_III
     }
     private Polos polo;
     private String curso;

@@ -8,7 +8,7 @@ import main.models.abstracts.Vehicle;
 public class EletricBike extends Vehicle implements BatteryLevel, Capacity {
     public enum HasRemovableBattery {
         TRUE,
-        FALSE,
+        FALSE
     }
     private HasRemovableBattery removableBattery;
     private int maxCapacity;
