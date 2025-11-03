@@ -1,9 +1,8 @@
 package main.models;
 
-import java.lang.reflect.AccessFlag;
-import main.interfaces.BatteryLevel;
-import main.interfaces.Capacity;
+import main.interfaces.*;
 import main.models.abstracts.Vehicle;
+import main.models.auxiliary.Location;
 
 public class EletricBike extends Vehicle implements BatteryLevel, Capacity {
     public enum HasRemovableBattery {
@@ -16,14 +15,14 @@ public class EletricBike extends Vehicle implements BatteryLevel, Capacity {
 
     public EletricBike() {};
 
-    public EletricBike(int id, AccessFlag.Location location, int batteryLevel, int maxCapacity) {
+    public EletricBike(int id, Location location, int batteryLevel, int maxCapacity) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.maxCapacity = maxCapacity;
         this.removableBattery = HasRemovableBattery.FALSE;
     }
 
-    public EletricBike(int id, AccessFlag.Location location, int batteryLevel, int maxCapacity, HasRemovableBattery removableBattery) {
+    public EletricBike(int id, Location location, int batteryLevel, int maxCapacity, HasRemovableBattery removableBattery) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.maxCapacity = maxCapacity;

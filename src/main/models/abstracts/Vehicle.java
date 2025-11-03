@@ -1,14 +1,14 @@
 package main.models.abstracts;
 
-import java.lang.reflect.AccessFlag;
+import main.models.auxiliary.Location;
 
 public abstract class Vehicle {
     int id;
-    AccessFlag.Location location;
+    Location location;
 
     public Vehicle(){}
 
-    public Vehicle(int id, AccessFlag.Location location) {
+    public Vehicle(int id, Location location) {
         this.id = id;
         this.location = location;
     }
@@ -21,11 +21,11 @@ public abstract class Vehicle {
         this.id = id;
     }
 
-    public AccessFlag.Location getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(AccessFlag.Location location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 

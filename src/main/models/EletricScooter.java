@@ -1,10 +1,10 @@
 package main.models;
 
-import java.lang.reflect.AccessFlag;
 import main.interfaces.BatteryLevel;
 import main.models.abstracts.Vehicle;
+import main.models.auxiliary.Location;
 
-public class ElectricScooter extends Vehicle implements BatteryLevel {
+public class EletricScooter extends Vehicle implements BatteryLevel {
     public enum HasLCD {
         TRUE,
         FALSE
@@ -12,15 +12,15 @@ public class ElectricScooter extends Vehicle implements BatteryLevel {
     private HasLCD LCD;
     private int batteryLevel;
 
-    public ElectricScooter() {};
+    public EletricScooter() {};
 
-    public ElectricScooter(int id, AccessFlag.Location location, int batteryLevel) {
+    public EletricScooter(int id, Location location, int batteryLevel) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.LCD = HasLCD.FALSE;
     }
 
-    public ElectricScooter(int id, AccessFlag.Location location, int batteryLevel, HasLCD LCD) {
+    public EletricScooter(int id, Location location, int batteryLevel, HasLCD LCD) {
         super(id, location);
         this.batteryLevel = batteryLevel;
         this.LCD = LCD;

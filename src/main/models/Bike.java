@@ -1,15 +1,15 @@
 package main.models;
 
-import java.lang.reflect.AccessFlag;
-import  main.interfaces.Capacity;
-import main.models.abstracts.Vehicle;
+import main.interfaces.Capacity;
+import  main.models.abstracts.Vehicle;
+import main.models.auxiliary.Location;
 
 public class Bike extends Vehicle implements Capacity {
     private int maxCapacity;
 
     public Bike() {};
 
-    public Bike(int id, AccessFlag.Location location, int maxCapacity) {
+    public Bike(int id, Location location, int maxCapacity) {
         super(id, location);
         this.maxCapacity = maxCapacity;
     }
