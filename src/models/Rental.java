@@ -12,7 +12,7 @@ public class Rental {
         LIGHT_RENTAL
     }
 
-    // Attributes
+    // --- Attributes ---
     private LocalDateTime reservationStartTime; // Start time of the reservation
     private LocalDateTime reservationEndTime; // End time of the reservation
 
@@ -21,7 +21,9 @@ public class Rental {
 
     private AddedServices[] addedServices; // Array of additional services
 
-    // Constructors
+    // --- Constructors ---
+    
+    // Default constructor
     public Rental() {}
 
     // Constructor with all attributes
@@ -42,7 +44,7 @@ public class Rental {
         this.addedServices = null;
     }
 
-    // Getters and Setters
+    // --- Getters, Setters and toString ---
 
     // Reservation Start Time
     public LocalDateTime getReservationStartTime() {
@@ -100,6 +102,8 @@ public class Rental {
                 (addedServices != null ? ", addedServices=" + Arrays.toString(addedServices) : "") +
                 '}';
     }
+
+    // --- Business Methods ---
 
     // Method to get the reservation duration in hours
     public long getReservationDuration() {
