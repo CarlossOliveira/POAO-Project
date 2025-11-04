@@ -1,4 +1,4 @@
-package main.models.abstracts;
+package models.abstracts;
 
 public abstract class User {
     public enum PaymentMethod {
@@ -38,4 +38,8 @@ public abstract class User {
                 ", paymentMethod='" + paymentMethod + '\'' +
                 '}';
     }
+
+    public abstract double getRentalPriceFor(Vehicle vehicle, long hours); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
+
+    public abstract double getDiscount();
 }

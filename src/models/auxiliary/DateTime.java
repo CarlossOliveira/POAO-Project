@@ -1,4 +1,4 @@
-package main.models.auxiliary;
+package models.auxiliary;
 
 public class DateTime {
     public int ano;

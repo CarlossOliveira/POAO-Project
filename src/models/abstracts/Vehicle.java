@@ -1,6 +1,7 @@
-package main.models.abstracts;
+package models.abstracts;
 
-import main.models.auxiliary.Location;
+import models.*;
+import models.auxiliary.Location;
 
 public abstract class Vehicle {
     int id;
@@ -36,4 +37,9 @@ public abstract class Vehicle {
                 ", location=" + location +
                 '}';
     }
+
+    // Pricing methods
+    public abstract double calculateRentalPrice(Docent user, long hours);
+    public abstract double calculateRentalPrice(NonDocent user, long hours);
+    public abstract double calculateRentalPrice(Student user, long hours);
 }

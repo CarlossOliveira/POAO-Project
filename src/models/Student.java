@@ -1,6 +1,7 @@
-package main.models;
+package models;
 
-import main.models.abstracts.User;
+import models.abstracts.User;
+import models.abstracts.Vehicle;
 
 public class Student extends User {
     public enum Polos {
@@ -41,5 +42,15 @@ public class Student extends User {
                 "curso='" + curso + '\'' +
                 ", polo=" + polo +
                 "} " + super.toString();
+    }
+
+    @Override
+    public double getRentalPriceFor(Vehicle vehicle, long hours) {
+        return vehicle.calculateRentalPrice(this, hours);
+    }
+
+    @Override
+    public double getDiscount() {
+        return 1; // No discount for Student users
     }
 }

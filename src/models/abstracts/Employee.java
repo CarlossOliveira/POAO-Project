@@ -1,22 +1,23 @@
-package main.models.abstracts;
+package models.abstracts;
 
-import main.models.auxiliary.DateTime;
+import java.time.*;
+
 
 public abstract class Employee extends User {
-    private DateTime hireDate;
+    private LocalDate hireDate;
 
     public Employee() {}
 
-    public Employee(String mechanographicNumber, PaymentMethod paymentMethod, DateTime hireDate) {
+    public Employee(String mechanographicNumber, PaymentMethod paymentMethod, LocalDate hireDate) {
         super(mechanographicNumber, paymentMethod);
         this.hireDate = hireDate;
     }
 
-    public DateTime getHireDate() {
+    public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(DateTime hireDate) {
+    public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
 
