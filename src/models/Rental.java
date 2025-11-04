@@ -19,7 +19,7 @@ public class Rental {
     private Vehicle vehicle;   // Can be Bike, EletricBike or EletricScooter
     private User user;  // Can be Student, Docent or NonDocent
 
-    private AddedServices[] addedServices; // List of additional services
+    private AddedServices[] addedServices; // Array of additional services
 
     // Constructors
     public Rental() {}
