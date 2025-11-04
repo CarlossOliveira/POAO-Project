@@ -1,7 +1,7 @@
 package models;
 
 import java.time.*;
-import java.util.List;
+import java.util.Arrays;
 import models.abstracts.User;
 import models.abstracts.Vehicle;
 
@@ -19,13 +19,13 @@ public class Rental {
     private Vehicle vehicle;   // Can be Bike, EletricBike or EletricScooter
     private User user;  // Can be Student, Docent or NonDocent
 
-    private List<AddedServices> addedServices; // List of additional services
+    private AddedServices[] addedServices; // List of additional services
 
     // Constructors
     public Rental() {}
 
     // Constructor with all attributes
-    public Rental(LocalDateTime reservationStartTime, LocalDateTime reservationEndTime, Vehicle vehicle, User user, List<AddedServices> addedServices) {
+    public Rental(LocalDateTime reservationStartTime, LocalDateTime reservationEndTime, Vehicle vehicle, User user, AddedServices[] addedServices) {
         this.reservationStartTime = reservationStartTime;
         this.reservationEndTime = reservationEndTime;
         this.vehicle = vehicle;
@@ -81,11 +81,11 @@ public class Rental {
     }
 
     // Added Services
-    public List<AddedServices> getAddedServices() {
+    public AddedServices[] getAddedServices() {
         return addedServices;
     }
 
-    public void setAddedServices(List<AddedServices> addedServices) {
+    public void setAddedServices(AddedServices[] addedServices) {
         this.addedServices = addedServices;
     }
 
@@ -97,7 +97,7 @@ public class Rental {
                 ", reservationEndTime=" + reservationEndTime +
                 ", vehicle=" + vehicle +
                 ", user=" + user +
-                (addedServices != null ? ", addedServices=" + addedServices.toString() : "") +
+                (addedServices != null ? ", addedServices=" + Arrays.toString(addedServices) : "") +
                 '}';
     }
 
