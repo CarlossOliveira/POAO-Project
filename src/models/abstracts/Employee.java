@@ -2,7 +2,6 @@ package models.abstracts;
 
 import java.time.*;
 
-
 public abstract class Employee extends User {
     private LocalDate hireDate;
 
