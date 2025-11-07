@@ -39,17 +39,17 @@ public class EletricBike extends EletricVehicles {
 
     // Pricing methods
     @Override
-    public double calculateRentalPrice(Docent user, long hours) {
+    public double calculateRentalPrice(Docent user) {
         return (this.removableBattery == HasRemovableBattery.FALSE ? 2.75 : 3.0); // Base Price for students
     }
     
     @Override
-    public double calculateRentalPrice(NonDocent user, long hours) {
+    public double calculateRentalPrice(NonDocent user) {
         return (this.removableBattery == HasRemovableBattery.FALSE ? 2.75 : 3.0); // Base Price for employees
     }
 
     @Override
-    public double calculateRentalPrice(Student user, long hours) {
+    public double calculateRentalPrice(Student user) {
         return (this.removableBattery == HasRemovableBattery.FALSE ? 1.25 : 1.50); // Base Price for students
     }
 }

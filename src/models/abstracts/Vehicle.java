@@ -39,7 +39,7 @@ public abstract class Vehicle {
     }
 
     // Pricing methods
-    public abstract double calculateRentalPrice(Docent user, long hours);
-    public abstract double calculateRentalPrice(NonDocent user, long hours);
-    public abstract double calculateRentalPrice(Student user, long hours);
+    public abstract double calculateRentalPrice(Docent user);
+    public abstract double calculateRentalPrice(NonDocent user);
+    public abstract double calculateRentalPrice(Student user);
 }

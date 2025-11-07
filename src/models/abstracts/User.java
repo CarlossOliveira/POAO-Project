@@ -39,7 +39,7 @@ public abstract class User {
                 '}';
     }
 
-    public abstract double getRentalPriceFor(Vehicle vehicle, long hours); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
+    public abstract double getRentalPriceFor(Vehicle vehicle); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
 
     public abstract double getDiscount();
 }

@@ -116,15 +116,16 @@ public class Rental {
         long hours = getReservationDuration();
 
         // Calculate base cost from vehicle
-        totalCost += user.getRentalPriceFor(vehicle, hours);
+        totalCost += user.getRentalPriceFor(vehicle) * hours;
         
         // Add costs for additional services
         if (addedServices != null) {
+            if (hours > 24) return 8;
             for (AddedServices service : addedServices) {
                 if (service == AddedServices.HELMET_RENTAL) {
-                    totalCost += (5.0 * (1 + (hours % 24))); // Additional cost for helmet rental per day
+                    totalCost += (5.0 * (1 + (hours / 24))); // Additional cost for helmet rental per day
                 } else if (service == AddedServices.LIGHT_RENTAL) {
-                    totalCost += (2.5 * (1 + (hours % 24))); // Additional cost for light rental per day
+                    totalCost += (2.5 * (1 + (hours / 24))); // Additional cost for light rental per day
                 }
             }
         }

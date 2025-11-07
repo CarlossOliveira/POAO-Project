@@ -30,8 +30,8 @@ public class NonDocent extends Employee {
     }
 
     @Override
-    public double getRentalPriceFor(Vehicle vehicle, long hours) {
-        return vehicle.calculateRentalPrice(this, hours);
+    public double getRentalPriceFor(Vehicle vehicle) {
+        return vehicle.calculateRentalPrice(this);
     }
 
     @Override

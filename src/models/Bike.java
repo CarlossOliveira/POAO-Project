@@ -34,17 +34,17 @@ public class Bike extends Vehicle {
 
     // Pricing methods
     @Override
-    public double calculateRentalPrice(Docent user, long hours) {
+    public double calculateRentalPrice(Docent user) {
         return (this.maxCapacity == BikeCapacity.SINGLE_SEATED ? 2.0 : 3.0); // Base Price for students
     }
     
     @Override
-    public double calculateRentalPrice(NonDocent user, long hours) {
+    public double calculateRentalPrice(NonDocent user) {
         return (this.maxCapacity == BikeCapacity.SINGLE_SEATED ? 2.0 : 3.0); // Base Price for employees
     }
 
     @Override
-    public double calculateRentalPrice(Student user, long hours) {
+    public double calculateRentalPrice(Student user) {
         return (this.maxCapacity == BikeCapacity.SINGLE_SEATED ? 1.0 : 2.0); // Base Price for students
     }
 }
