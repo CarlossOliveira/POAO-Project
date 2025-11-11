@@ -12,7 +12,7 @@ public abstract class User {
     private String mechanographicNumber;
     
 
-    public User(){}
+    public User() {}
 
     public User(String mechanographicNumber, PaymentMethod paymentMethod) {
         this.mechanographicNumber = mechanographicNumber;
@@ -43,5 +43,5 @@ public abstract class User {
                 '}';
     }
 
-    public abstract double getRentalPriceFor(Vehicle vehicle, long hours); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
+    public abstract double getRentalPriceFor(Vehicle vehicle); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
 }
