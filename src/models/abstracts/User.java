@@ -31,6 +31,10 @@ public abstract class User {
         this.paymentMethod = paymentMethod;
     }
 
+    public double getDiscount() {
+        return 1.0; // No discount for Student and Docent users, Non Docent users override this function
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -39,7 +43,5 @@ public abstract class User {
                 '}';
     }
 
-    public abstract double getRentalPriceFor(Vehicle vehicle); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
-
-    public abstract double getDiscount();
+    public abstract double getRentalPriceFor(Vehicle vehicle, long hours); // Implements getRentalPriceFor in each subclass in order to call calculateRentalPrice of Vehicle
 }

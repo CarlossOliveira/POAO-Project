@@ -48,9 +48,4 @@ public class Student extends User {
     public double getRentalPriceFor(Vehicle vehicle) {
         return vehicle.calculateRentalPrice(this);
     }
-
-    @Override
-    public double getDiscount() {
-        return 1; // No discount for Student users
-    }
 }

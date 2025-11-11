@@ -44,9 +44,4 @@ public class Docent extends Employee {
     public double getRentalPriceFor(Vehicle vehicle) {
         return vehicle.calculateRentalPrice(this);
     }
-
-    @Override
-    public double getDiscount() {
-        return 1; // No discount for Docent users
-    }
 }
